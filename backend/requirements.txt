@@ -1,0 +1,9 @@
+Django
+djangorestframework
+django-cors-headers
+djangorestframework-simplejwt
+drf-spectacular
+pandas
+numpy
+django-environ
+gunicorn

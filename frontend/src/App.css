@@ -1,0 +1,298 @@
+/* Assuming these variables are defined somewhere in your CSS */
+:root {
+  --primary-color: #3b82f6; /* Example Blue */
+  --text-primary: #1f2937; /* Example Dark Gray */
+  --text-secondary: #6b7280; /* Example Medium Gray */
+  --radius: 8px;
+}
+
+/* General styles that might already exist */
+.card {
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-header.text-center {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #d1d5db;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Styles extracted from LoginPage.jsx */
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-icon { font-size: 3rem; margin-bottom: 1rem; }
+.login-title { font-size: 2rem; font-weight: bold; color: var(--primary-color); margin: 0; }
+.login-subtitle { color: var(--text-secondary); margin: 0.5rem 0 0 0; font-size: 0.875rem; }
+.input-icon { margin-right: 0.5rem; }
+.button-icon { /* No specific styles needed, just for semantics */ }
+.demo-credentials {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(37, 99, 235, 0.05);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* General utility styles */
+.page-container {
+  padding: 2rem 1rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* DashboardPage specific styles */
+.dashboard-loading-container {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.dashboard-loading-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.dashboard-loading-spinner {
+  margin: 0 auto 1rem auto;
+}
+
+.dashboard-loading-title {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.dashboard-loading-text {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.dashboard-header-icon {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
+}
+
+.dashboard-subtitle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dashboard-updating-badge {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.dashboard-updating-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.dashboard-refresh-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: white;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dashboard-refresh-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-refresh-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.dashboard-refresh-icon {
+  animation: spin 1s linear infinite;
+}
+
+.kpi-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.kpi-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-title {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kpi-value {
+  margin: 0.5rem 0 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.kpi-run-id {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.kpi-profit-icon {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
+}
+
+.kpi-profit-value {
+  color: #10b981;
+}
+
+.kpi-efficiency-icon {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+}
+
+.kpi-efficiency-value {
+  color: #3b82f6;
+}
+
+.kpi-ontime-icon {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
+}
+
+.kpi-ontime-value {
+  color: #10b981;
+}
+
+.kpi-late-icon {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
+}
+
+.kpi-late-value {
+  color: #ef4444;
+}
+
+.chart-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}

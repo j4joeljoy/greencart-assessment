@@ -159,8 +159,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# CORS settings
-CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS', default=['https://yourfrontend.com'])
+CORS_ALLOWED_ORIGINS = [
+    "https://greencart-assessment-frontend.onrender.com",  # Public URL of your frontend
+    "http://localhost:3000",
+    "http://127.0.0.1:8000",
+    # Add other origins as needed
+]
 CORS_ALLOW_ALL_ORIGINS = DEBUG  # Only allow in development
 
 REST_FRAMEWORK = {

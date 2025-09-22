@@ -41,12 +41,17 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DJANGO_DEBUG')
 
+CORS_ALLOWED_ORIGINS = [
+    "https://greencart-assessment-1.onrender.com",
+    "http://127.0.0.1:8000",
+    "http://localhost:3000",
+]
+
 ALLOWED_HOSTS = [
-    'greencart-assessment.onrender.com',
+    'greencart-assessment-1.onrender.com',
     'localhost',
     '127.0.0.1'
 ]
-
 # Application definition
 
 INSTALLED_APPS = [
